@@ -47,8 +47,9 @@ graph TD
         AgentLoop -->|4. Final Answer 最终大纲| LLM
     end
 
-    BE_Query -.->|data: {"type": "content", "delta": "字块"}|\n\n RAGMgr
-    BE_Agent -.->|data: {"type": "thought/action/observation/content"}|\n\n RAGMgr
+    BE_Query -.->|"data: {'type': 'content', 'delta': '字块'}"| RAGMgr
+    BE_Agent -.->|"data: {'type': 'thought/action/observation/content'}"| RAGMgr
+
 ```
 
 ---
