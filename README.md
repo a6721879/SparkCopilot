@@ -26,9 +26,9 @@ graph TD
         App -->|AsyncSequence 流式解析| RAGMgr[RAGManager 状态管理]
     end
 
-    RAGMgr -->|POST /upload (Multipart)| BE_Upload[FastAPI: PDF 解析与向量建库]
-    RAGMgr -->|POST /stream_query (SSE)| BE_Query[FastAPI: RAG 伴读流]
-    RAGMgr -->|POST /stream_agent (SSE)| BE_Agent[FastAPI: Agent 规划流]
+    RAGMgr -->|"POST /upload (Multipart)"| BE_Upload[FastAPI: PDF 解析与向量建库]
+    RAGMgr -->|"POST /stream_query (SSE)"| BE_Query[FastAPI: RAG 伴读流]
+    RAGMgr -->|"POST /stream_agent (SSE)"| BE_Agent[FastAPI: Agent 规划流]
 
     subgraph Backend [FastAPI 后端脑回路]
         BE_Upload -->|RecursiveSplitter| Chunks[文本切片]
