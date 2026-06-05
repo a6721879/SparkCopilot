@@ -1,0 +1,16 @@
+[project]
+name = "day25-fastapi-agent"
+version = "0.1.0"
+description = "Day 25 FastAPI Backend with SSE Streaming Agent Planner"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "pypdf>=4.0.1",
+    "chromadb>=0.4.24",
+    "openai>=1.12.0",
+    "python-dotenv>=1.0.1",
+    "langchain-text-splitters>=0.2.0",
+    "python-multipart>=0.0.9",
+    "duckduckgo-search>=6.1.7",
+]

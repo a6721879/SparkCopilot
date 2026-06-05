@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Xcode & Swift Build artifacts
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Python Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local Database & Dynamic Logs
+backend/chroma_data/
+chroma_data/
+build.log
+
+# Private Keys & Configurations (CRITICAL: Do NOT upload to GitHub)
+.env
+backend/.env
+**/.env
