@@ -84,7 +84,7 @@ graph TD
 ### 1. 后端服务启动
 1.  进入后端目录：
     ```bash
-    cd code/day27/backend
+    cd backend
     ```
 2.  配置环境变量：
     新建 `.env` 文件并填入您的大模型 API 密钥（DeepSeek 官方或硅基流动）：
@@ -97,13 +97,16 @@ graph TD
     ```bash
     uv run python main.py
     ```
-    服务成功启动后会在本地 `http://localhost:8000` 监听。
+    服务成功启动后会在本地 `http://127.0.0.1:8000` 监听。
 
 ### 2. iOS 客户端运行
-1.  打开 Mac 上的 **Xcode** ➔ 新建一个 Single View App 项目，模板选择 **SwiftUI**，项目名命名为 `SparkCopilot`。
-2.  将 `code/day27/ios-client/` 目录下的三个源码文件：
-    *   `RAGManager.swift`
-    *   `ContentView.swift`
-    *   `SparkApp.swift`
-    直接拖拽到你的 Xcode 工程中，**覆盖替换**已有的同名文件。
-3.  在 Xcode 中选择一个模拟器（如 iPhone 16 Pro），按 **`Cmd + R`** 启动运行即可！
+我们推荐使用 **XcodeGen** 自动化工具一键生成并配置 Xcode 项目：
+1.  确保您的 Mac 上已安装 `xcodegen`（如未安装，可运行 `brew install xcodegen` 安装）。
+2.  在项目根目录下，直接在终端执行：
+    ```bash
+    xcodegen
+    ```
+    这会在根目录下自动生成 `SparkCopilot.xcodeproj` 项目文件，并自动配置好了所有的全屏、网络及文件权限。
+3.  使用 Xcode 打开 `SparkCopilot.xcodeproj`。
+4.  在 Xcode 中选择一个模拟器（如 iPhone 16 Pro），按 **`Cmd + R`** 启动运行即可！
+
